@@ -20,7 +20,7 @@ export default class MyWebView extends React.Component {
       headerStyle: {
         backgroundColor: '#fff',
       },
-      headerTitleAlign: 'center',
+      headerBackTitle: ' '
     };
   };
   render() {

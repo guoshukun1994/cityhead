@@ -1,21 +1,16 @@
 import 'react-native-get-random-values';
 import React from 'react';
-import {StyleSheet, TouchableOpacity, Button, Image, View} from 'react-native';
+import {
+  StyleSheet, 
+  SafeAreaView
+} from 'react-native';
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
-  Login,
   MyWebView,
   GuideScreen,
-  HealthCode,
-  Home,
-  Personal,
-  People,
-  About,
-  Advise,
-  PersonalInfo
 } from './src/index';
 import storage from './src/store/index';
 import {checkToken} from './src/api/api';
@@ -31,22 +26,24 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Guide">
-          <Stack.Screen
-            name="Guide"
-            component={GuideScreen}
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="WebView"
-            component={MyWebView}
-            options={MyWebView.navigationOptions}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <SafeAreaView style={styles.safeArea}>
+            <NavigationContainer>
+            <Stack.Navigator initialRouteName="Guide">
+              <Stack.Screen
+                name="Guide"
+                component={GuideScreen}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name="WebView"
+                component={MyWebView}
+                options={MyWebView.navigationOptions}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+      </SafeAreaView>
     );
   }
 }
@@ -56,6 +53,8 @@ const styles = StyleSheet.create({
     height: 25,
     width: 25,
   },
+  safeArea: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.7)'
+  }
 });
-
-// export default App;
