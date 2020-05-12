@@ -19,6 +19,7 @@
 		8F91D7B3CABE482DB5765C38 /* libPods-cityhead-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE265DE6CA5C6E07BB7E376 /* libPods-cityhead-tvOS.a */; };
 		8FF685D3DA557DCE82DEAB73 /* libPods-cityhead.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E003A4FF50C15C5448F15809 /* libPods-cityhead.a */; };
 		CC593CAE2462BC89006CA9DD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC593CAD2462BC89006CA9DD /* Launch Screen.storyboard */; };
+		CCCC6E672465BA330098EF78 /* cityhead in Resources */ = {isa = PBXBuildFile; fileRef = CCCC6E662465BA330098EF78 /* cityhead */; };
 		E26038B6D2E368D79F7E3E74 /* libPods-cityhead-cityheadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C703C67CEFF986CB0317288 /* libPods-cityhead-cityheadTests.a */; };
 		F9288F81714BF256BE291D80 /* libPods-cityhead-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48431CF7988642ADFCA8560E /* libPods-cityhead-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		CAE265DE6CA5C6E07BB7E376 /* libPods-cityhead-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cityhead-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC593CAD2462BC89006CA9DD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CCAF330D3C4A688527F6844D /* Pods-cityhead.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityhead.release.xcconfig"; path = "Target Support Files/Pods-cityhead/Pods-cityhead.release.xcconfig"; sourceTree = "<group>"; };
+		CCCC6E662465BA330098EF78 /* cityhead */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cityhead; sourceTree = "<group>"; };
 		CCDBBF60F04D982F13044F46 /* Pods-cityhead-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityhead-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-cityhead-tvOS/Pods-cityhead-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E003A4FF50C15C5448F15809 /* libPods-cityhead.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cityhead.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44D8099C6C6BF29B06BDC80 /* Pods-cityhead-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityhead-tvOS.release.xcconfig"; path = "Target Support Files/Pods-cityhead-tvOS/Pods-cityhead-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CCCC6E662465BA330098EF78 /* cityhead */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				CC593CAE2462BC89006CA9DD /* Launch Screen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Assets.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				CCCC6E672465BA330098EF78 /* cityhead in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

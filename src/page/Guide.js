@@ -54,9 +54,9 @@ export default class GuideScreen extends Component {
                onRequestClose={()=> {
                   alert("Modal has been closed.");
                }}>
-            <View style={{ flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.3)' }}>
-                  <View style={{ backgroundColor: '#fff',width: '80%' }}>
-                       <Text style={{ height: 40, lineHeight: 40, textAlign: "center", fontSize: 16, fontWeight: "bold" }}>用户协议与隐私政策</Text>
+            <View style={styles.centeredView}>
+                  <View style={styles.modalView}>
+                       <Text style={styles.modalText}>用户协议与隐私政策</Text>
                        <ScrollView style={{height: '70%', paddingHorizontal: 30}}>
                             <Text style={styles.privateText}>一，总则</Text>
                             <Text>&emsp;</Text>
@@ -109,7 +109,7 @@ export default class GuideScreen extends Component {
                               本协议解释权及修订归杭州市数据资源管理局所有
                             </Text>
                        </ScrollView>
-                       <View style={{ height: 50, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center'  }}>
+                       <View style={styles.modalBottom}>
                             <TouchableOpacity 
                                 onPress={ ()=> {
                                     this.setState({
@@ -133,8 +133,27 @@ export default class GuideScreen extends Component {
                   </View>
             </View>
         </Modal>
-        { !this.state.openSts ? null :
-              <Swiper
+        { !this.state.openSts ? 
+          <View
+            style={{
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              justifyContent: 'center',
+              backgroundColor: 'rgba(0,0,0,0.1)'
+            }}>
+            <Text
+              style={{
+                textAlign: 'center',
+                marginTop: 10,
+              }}>
+              加载中...
+            </Text>
+          </View>
+         :
+          <Swiper
               showsButtons={true}
               showsPagination={true}
               showsButtons={false}
@@ -204,7 +223,7 @@ export default class GuideScreen extends Component {
                   source={require('../assets/logo.png')}
                 />
               </View>
-            </Swiper>
+          </Swiper>
         }
         
       </View>
@@ -213,6 +232,30 @@ export default class GuideScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+
+  centeredView: {
+    flex:1, 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.3)' 
+  },
+  modalView: {
+    backgroundColor: '#fff',
+    width: '80%'
+  },
+  modalText: {
+    height: 40, 
+    lineHeight: 40, 
+    textAlign: "center", 
+    fontSize: 16, 
+    fontWeight: "bold" 
+  },
+  modalBottom: { 
+    height: 50, 
+    flexDirection: 'row', 
+    justifyContent: 'space-around', 
+    alignItems: 'center'  
+  },
   privateText: {
     color: '#333333',
     fontSize: 16,
